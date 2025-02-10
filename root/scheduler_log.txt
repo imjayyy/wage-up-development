@@ -1,0 +1,888 @@
+[2020-07-08 23:12:23,155] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=6105
+[2020-07-08 23:12:23,305] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2020-07-08 23:12:23,692] {{scheduler_job.py:1288}} INFO - Starting the scheduler
+[2020-07-08 23:12:23,693] {{scheduler_job.py:1296}} INFO - Running execute loop for -1 seconds
+[2020-07-08 23:12:23,693] {{scheduler_job.py:1297}} INFO - Processing each file at most -1 times
+[2020-07-08 23:12:23,693] {{scheduler_job.py:1300}} INFO - Searching for files in /usr/local/airflow/dags
+[2020-07-08 23:12:23,812] {{scheduler_job.py:1302}} INFO - There are 28 files in /usr/local/airflow/dags
+[2020-07-08 23:12:23,812] {{scheduler_job.py:1349}} INFO - Resetting orphaned tasks for active dag runs
+[2020-07-08 23:12:23,829] {{dag_processing.py:543}} INFO - Launched DagFileProcessorManager with pid: 6114
+[2020-07-08 23:12:23,834] {{settings.py:54}} INFO - Configured default timezone <Timezone [UTC]>
+[2020-07-08 23:12:23,843] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=6114
+[2020-07-08 23:16:16,125] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-08 22:10:00+00:00 [scheduled]>
+[2020-07-08 23:16:16,135] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-07-08 23:16:16,135] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-08 23:16:16,148] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-08 22:10:00+00:00 [scheduled]>
+[2020-07-08 23:16:16,159] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-08 22:10:00+00:00 [queued]>
+[2020-07-08 23:16:16,159] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 8, 22, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-08 23:16:16,160] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-08T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-08 23:16:16,160] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-08T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-08 23:16:16,787] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=6610
+[2020-07-08 23:16:16,959] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-08 23:16:17,414] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-08 23:16:17,481] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-08T22:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-08 23:16:27,764] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-08 22:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 13:05:37,337] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.col_ops 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:05:37,346] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 13:05:37,347] {{scheduler_job.py:961}} INFO - DAG aca_main has 0/16 running and queued tasks
+[2020-07-09 13:05:37,368] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.col_ops 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:05:37,384] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.col_ops 2020-07-08 13:00:00+00:00 [queued]>
+[2020-07-09 13:05:37,385] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'col_ops', datetime.datetime(2020, 7, 8, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 11 and queue default
+[2020-07-09 13:05:37,385] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'col_ops', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:05:37,385] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'col_ops', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:05:38,130] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=15274
+[2020-07-09 13:05:38,290] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 13:05:38,622] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-09 13:05:38,673] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.col_ops 2020-07-08T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 13:06:39,088] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.col_ops execution_date=2020-07-08 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 13:06:42,166] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.col_surv 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:06:42,188] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-09 13:06:42,188] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-09 13:06:42,211] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.col_surv 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:06:42,228] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.col_surv 2020-07-08 13:00:00+00:00 [queued]>
+[2020-07-09 13:06:42,229] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'col_surv', datetime.datetime(2020, 7, 8, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 8 and queue default
+[2020-07-09 13:06:42,229] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'col_surv', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:06:42,229] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'col_surv', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:06:43,016] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=15778
+[2020-07-09 13:06:43,178] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 13:06:43,569] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-09 13:06:43,621] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.col_surv 2020-07-08T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 13:09:14,421] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.col_surv execution_date=2020-07-08 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 13:09:15,489] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.assign_check_id 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:09:15,503] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-09 13:09:15,504] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-09 13:09:15,523] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.assign_check_id 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:09:15,545] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.assign_check_id 2020-07-08 13:00:00+00:00 [queued]>
+[2020-07-09 13:09:15,546] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'assign_check_id', datetime.datetime(2020, 7, 8, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 7 and queue default
+[2020-07-09 13:09:15,546] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'assign_check_id', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:09:15,546] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'assign_check_id', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:09:16,410] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16589
+[2020-07-09 13:09:16,609] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 13:09:16,978] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-09 13:09:17,091] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.assign_check_id 2020-07-08T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 13:23:01,391] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.assign_check_id execution_date=2020-07-08 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 13:25:12,606] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.qa 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:25:12,615] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-09 13:25:12,616] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-09 13:25:12,629] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.qa 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 13:25:12,642] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.qa 2020-07-08 13:00:00+00:00 [queued]>
+[2020-07-09 13:25:12,642] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'qa', datetime.datetime(2020, 7, 8, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 5 and queue default
+[2020-07-09 13:25:12,643] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'qa', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:25:12,643] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'qa', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 13:25:13,321] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=20764
+[2020-07-09 13:25:13,519] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 13:25:13,873] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-09 13:25:13,936] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.qa 2020-07-08T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 13:25:29,342] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.qa execution_date=2020-07-08 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 14:10:46,897] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 13:10:00+00:00 [scheduled]>
+[2020-07-09 14:10:47,012] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-07-09 14:10:47,013] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 14:10:47,202] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 13:10:00+00:00 [scheduled]>
+[2020-07-09 14:10:47,284] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 13:10:00+00:00 [queued]>
+[2020-07-09 14:10:47,285] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 9, 13, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-09 14:10:47,285] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T13:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 14:10:47,285] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T13:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 14:10:55,583] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28674
+[2020-07-09 14:10:57,579] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 14:11:01,442] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 14:11:02,026] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09T13:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 14:11:50,357] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-09 13:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 14:37:33,153] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.simple_agg 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 14:37:33,289] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-09 14:37:33,289] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-09 14:37:33,477] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.simple_agg 2020-07-08 13:00:00+00:00 [scheduled]>
+[2020-07-09 14:37:33,563] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.simple_agg 2020-07-08 13:00:00+00:00 [queued]>
+[2020-07-09 14:37:33,564] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'simple_agg', datetime.datetime(2020, 7, 8, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 3 and queue default
+[2020-07-09 14:37:33,564] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'simple_agg', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 14:37:33,564] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'simple_agg', '2020-07-08T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-09 14:37:40,281] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=32407
+[2020-07-09 14:37:42,070] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 14:37:45,838] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-09 14:37:46,365] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.simple_agg 2020-07-08T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 15:28:02,059] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.simple_agg execution_date=2020-07-08 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 16:10:04,218] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 15:10:00+00:00 [scheduled]>
+[2020-07-09 16:10:04,232] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-07-09 16:10:04,232] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 16:10:04,252] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 15:10:00+00:00 [scheduled]>
+[2020-07-09 16:10:04,264] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 15:10:00+00:00 [queued]>
+[2020-07-09 16:10:04,265] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 9, 15, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-09 16:10:04,265] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-09T15:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 16:10:04,265] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-09T15:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 16:10:04,869] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=15251
+[2020-07-09 16:10:05,024] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 16:10:05,419] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 16:10:05,467] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09T15:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 16:10:10,866] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-09 15:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 17:00:01,390] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-08 17:00:00+00:00 [scheduled]>
+[2020-07-09 17:00:01,402] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 17:00:01,402] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-09 17:00:01,416] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-08 17:00:00+00:00 [scheduled]>
+[2020-07-09 17:00:01,427] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-08 17:00:00+00:00 [queued]>
+[2020-07-09 17:00:01,427] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'daily_file_sensor_two', datetime.datetime(2020, 7, 8, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 10 and queue default
+[2020-07-09 17:00:01,427] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'daily_file_sensor_two', '2020-07-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-09 17:00:01,427] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'daily_file_sensor_two', '2020-07-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-09 17:00:02,344] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=2092
+[2020-07-09 17:00:02,539] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 17:00:02,937] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-09 17:00:03,012] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-08T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 17:00:08,401] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.daily_file_sensor_two execution_date=2020-07-08 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 17:09:26,106] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.file_sensor 2020-07-08 17:00:00+00:00 [scheduled]>
+[2020-07-09 17:09:26,119] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 17:09:26,120] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-09 17:09:26,144] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.file_sensor 2020-07-08 17:00:00+00:00 [scheduled]>
+[2020-07-09 17:09:26,160] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.file_sensor 2020-07-08 17:00:00+00:00 [queued]>
+[2020-07-09 17:09:26,161] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'file_sensor', datetime.datetime(2020, 7, 8, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 8 and queue default
+[2020-07-09 17:09:26,161] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'file_sensor', '2020-07-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-09 17:09:26,161] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'file_sensor', '2020-07-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-09 17:09:26,907] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=5633
+[2020-07-09 17:09:27,060] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 17:09:27,389] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-09 17:09:27,437] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.file_sensor 2020-07-08T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 17:09:32,825] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.file_sensor execution_date=2020-07-08 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 17:10:05,933] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 16:10:00+00:00 [scheduled]>
+[2020-07-09 17:10:05,959] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-09 17:10:05,959] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 17:10:06,008] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 16:10:00+00:00 [scheduled]>
+[2020-07-09 17:10:06,028] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 16:10:00+00:00 [queued]>
+[2020-07-09 17:10:06,028] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 9, 16, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-09 17:10:06,029] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-09T16:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 17:10:06,029] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-09T16:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 17:10:06,828] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=5987
+[2020-07-09 17:10:07,138] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 17:10:07,515] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 17:10:07,565] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09T16:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 17:10:12,876] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-09 16:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 17:18:38,500] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.assign_check_id 2020-07-08 17:00:00+00:00 [scheduled]>
+[2020-07-09 17:18:38,521] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 17:18:38,521] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-09 17:18:38,539] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.assign_check_id 2020-07-08 17:00:00+00:00 [scheduled]>
+[2020-07-09 17:18:38,555] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.assign_check_id 2020-07-08 17:00:00+00:00 [queued]>
+[2020-07-09 17:18:38,556] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'assign_check_id', datetime.datetime(2020, 7, 8, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 5 and queue default
+[2020-07-09 17:18:38,556] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'assign_check_id', '2020-07-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-09 17:18:38,556] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'assign_check_id', '2020-07-08T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-09 17:18:39,256] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=9237
+[2020-07-09 17:18:39,414] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 17:18:39,755] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-09 17:18:39,819] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.assign_check_id 2020-07-08T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 17:41:38,585] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.assign_check_id execution_date=2020-07-08 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 18:10:09,636] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 17:10:00+00:00 [scheduled]>
+[2020-07-09 18:10:09,644] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-09 18:10:09,644] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 18:10:09,656] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 17:10:00+00:00 [scheduled]>
+[2020-07-09 18:10:09,666] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 17:10:00+00:00 [queued]>
+[2020-07-09 18:10:09,667] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 9, 17, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-09 18:10:09,667] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T17:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 18:10:09,667] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T17:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 18:10:10,352] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=31241
+[2020-07-09 18:10:10,514] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 18:10:10,847] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 18:10:10,908] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09T17:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 18:10:21,284] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-09 17:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 20:10:06,612] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 19:10:00+00:00 [scheduled]>
+[2020-07-09 20:10:06,625] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 20:10:06,626] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 20:10:06,649] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 19:10:00+00:00 [scheduled]>
+[2020-07-09 20:10:06,685] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 19:10:00+00:00 [queued]>
+[2020-07-09 20:10:06,685] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 9, 19, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-09 20:10:06,686] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 20:10:06,686] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 20:10:07,304] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=24325
+[2020-07-09 20:10:07,478] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 20:10:07,830] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 20:10:07,879] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09T19:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 20:10:18,220] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-09 19:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 21:00:04,708] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: cleanup.cleanup 2020-07-02 21:00:00+00:00 [scheduled]>
+[2020-07-09 21:00:04,716] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 21:00:04,717] {{scheduler_job.py:961}} INFO - DAG cleanup has 0/16 running and queued tasks
+[2020-07-09 21:00:04,728] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: cleanup.cleanup 2020-07-02 21:00:00+00:00 [scheduled]>
+[2020-07-09 21:00:04,738] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: cleanup.cleanup 2020-07-02 21:00:00+00:00 [queued]>
+[2020-07-09 21:00:04,739] {{scheduler_job.py:1116}} INFO - Sending ('cleanup', 'cleanup', datetime.datetime(2020, 7, 2, 21, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-09 21:00:04,739] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'cleanup', 'cleanup', '2020-07-02T21:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing_cleanup.py']
+[2020-07-09 21:00:04,739] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'cleanup', 'cleanup', '2020-07-02T21:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing_cleanup.py']
+[2020-07-09 21:00:05,451] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16001
+[2020-07-09 21:00:05,652] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 21:00:06,093] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing_cleanup.py
+[2020-07-09 21:00:06,149] {{cli.py:516}} INFO - Running <TaskInstance: cleanup.cleanup 2020-07-02T21:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 21:00:36,512] {{scheduler_job.py:1256}} INFO - Executor reports execution of cleanup.cleanup execution_date=2020-07-02 21:00:00+00:00 exited with status success for try_number 1
+[2020-07-09 22:10:06,611] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 21:10:00+00:00 [scheduled]>
+[2020-07-09 22:10:06,621] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 22:10:06,622] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 22:10:06,639] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 21:10:00+00:00 [scheduled]>
+[2020-07-09 22:10:06,650] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09 21:10:00+00:00 [queued]>
+[2020-07-09 22:10:06,650] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 9, 21, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-09 22:10:06,651] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T21:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 22:10:06,651] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-09T21:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 22:10:07,367] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=17755
+[2020-07-09 22:10:07,572] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 22:10:08,021] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 22:10:08,103] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-09T21:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 22:10:18,490] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-09 21:10:00+00:00 exited with status success for try_number 1
+[2020-07-09 23:10:03,840] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 22:10:00+00:00 [scheduled]>
+[2020-07-09 23:10:03,859] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-09 23:10:03,859] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-09 23:10:03,897] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 22:10:00+00:00 [scheduled]>
+[2020-07-09 23:10:03,926] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09 22:10:00+00:00 [queued]>
+[2020-07-09 23:10:03,926] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 9, 22, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-09 23:10:03,927] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-09T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 23:10:03,928] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-09T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-09 23:10:04,656] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=14256
+[2020-07-09 23:10:04,830] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-09 23:10:05,171] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-09 23:10:05,236] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-09T22:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-09 23:10:10,591] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-09 22:10:00+00:00 exited with status success for try_number 1
+[2020-07-10 13:09:26,583] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.assign_check_id 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 13:09:26,593] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-10 13:09:26,594] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-10 13:09:26,619] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.assign_check_id 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 13:09:26,633] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.assign_check_id 2020-07-09 13:00:00+00:00 [queued]>
+[2020-07-10 13:09:26,633] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'assign_check_id', datetime.datetime(2020, 7, 9, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 7 and queue default
+[2020-07-10 13:09:26,634] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'assign_check_id', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 13:09:26,634] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'assign_check_id', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 13:09:27,380] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=29052
+[2020-07-10 13:09:27,557] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 13:09:27,883] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-10 13:09:27,931] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.assign_check_id 2020-07-09T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 13:23:35,976] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.assign_check_id execution_date=2020-07-09 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-10 13:23:37,047] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.fix_dups 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 13:23:37,061] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-10 13:23:37,061] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-10 13:23:37,080] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.fix_dups 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 13:23:37,091] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.fix_dups 2020-07-09 13:00:00+00:00 [queued]>
+[2020-07-10 13:23:37,092] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'fix_dups', datetime.datetime(2020, 7, 9, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 6 and queue default
+[2020-07-10 13:23:37,092] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'fix_dups', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 13:23:37,092] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'fix_dups', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 13:23:37,983] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=32636
+[2020-07-10 13:23:38,285] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 13:23:38,722] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-10 13:23:38,795] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.fix_dups 2020-07-09T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 13:25:44,414] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.fix_dups execution_date=2020-07-09 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-10 13:25:53,472] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.qa 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 13:25:53,480] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-10 13:25:53,480] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-10 13:25:53,501] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.qa 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 13:25:53,518] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.qa 2020-07-09 13:00:00+00:00 [queued]>
+[2020-07-10 13:25:53,519] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'qa', datetime.datetime(2020, 7, 9, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 5 and queue default
+[2020-07-10 13:25:53,519] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'qa', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 13:25:53,519] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'qa', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 13:25:54,246] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=849
+[2020-07-10 13:25:54,408] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 13:25:54,819] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-10 13:25:54,866] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.qa 2020-07-09T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 13:26:10,261] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.qa execution_date=2020-07-09 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-10 14:38:29,938] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.simple_agg 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 14:38:30,032] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-10 14:38:30,033] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-10 14:38:30,148] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.simple_agg 2020-07-09 13:00:00+00:00 [scheduled]>
+[2020-07-10 14:38:30,194] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.simple_agg 2020-07-09 13:00:00+00:00 [queued]>
+[2020-07-10 14:38:30,195] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'simple_agg', datetime.datetime(2020, 7, 9, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 3 and queue default
+[2020-07-10 14:38:30,195] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'simple_agg', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 14:38:30,196] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'simple_agg', '2020-07-09T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-10 14:38:37,346] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=13813
+[2020-07-10 14:38:39,291] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 14:38:43,038] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-10 14:38:43,634] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.simple_agg 2020-07-09T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 15:30:28,310] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.simple_agg execution_date=2020-07-09 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-10 16:10:02,032] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-10 15:10:00+00:00 [scheduled]>
+[2020-07-10 16:10:02,042] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-07-10 16:10:02,042] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-10 16:10:02,054] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-10 15:10:00+00:00 [scheduled]>
+[2020-07-10 16:10:02,066] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-10 15:10:00+00:00 [queued]>
+[2020-07-10 16:10:02,067] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 10, 15, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-10 16:10:02,067] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-10T15:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-10 16:10:02,067] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-10T15:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-10 16:10:02,927] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=30939
+[2020-07-10 16:10:03,093] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 16:10:03,495] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-10 16:10:03,567] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-10T15:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 16:10:08,985] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-10 15:10:00+00:00 exited with status success for try_number 1
+[2020-07-10 17:00:03,761] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-09 17:00:00+00:00 [scheduled]>
+[2020-07-10 17:00:03,803] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-10 17:00:03,803] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-10 17:00:03,869] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-09 17:00:00+00:00 [scheduled]>
+[2020-07-10 17:00:03,934] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-09 17:00:00+00:00 [queued]>
+[2020-07-10 17:00:03,934] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'daily_file_sensor_two', datetime.datetime(2020, 7, 9, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 10 and queue default
+[2020-07-10 17:00:03,934] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'daily_file_sensor_two', '2020-07-09T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-10 17:00:03,935] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'daily_file_sensor_two', '2020-07-09T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-10 17:00:04,740] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=18074
+[2020-07-10 17:00:04,901] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 17:00:05,212] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-10 17:00:05,304] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-09T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 17:00:10,715] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.daily_file_sensor_two execution_date=2020-07-09 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-10 19:10:13,197] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: send_notifications.send_notifications 2020-07-09 19:10:00+00:00 [scheduled]>
+[2020-07-10 19:10:13,205] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-10 19:10:13,206] {{scheduler_job.py:961}} INFO - DAG send_notifications has 0/16 running and queued tasks
+[2020-07-10 19:10:13,220] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: send_notifications.send_notifications 2020-07-09 19:10:00+00:00 [scheduled]>
+[2020-07-10 19:10:13,233] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: send_notifications.send_notifications 2020-07-09 19:10:00+00:00 [queued]>
+[2020-07-10 19:10:13,233] {{scheduler_job.py:1116}} INFO - Sending ('send_notifications', 'send_notifications', datetime.datetime(2020, 7, 9, 19, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-10 19:10:13,233] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'send_notifications', 'send_notifications', '2020-07-09T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/send_notifications.py']
+[2020-07-10 19:10:13,234] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'send_notifications', 'send_notifications', '2020-07-09T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/send_notifications.py']
+[2020-07-10 19:10:14,180] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=11305
+[2020-07-10 19:10:14,359] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 19:10:14,740] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/send_notifications.py
+[2020-07-10 19:10:14,833] {{cli.py:516}} INFO - Running <TaskInstance: send_notifications.send_notifications 2020-07-09T19:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 19:10:25,210] {{scheduler_job.py:1256}} INFO - Executor reports execution of send_notifications.send_notifications execution_date=2020-07-09 19:10:00+00:00 exited with status success for try_number 1
+[2020-07-10 21:10:10,608] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10 20:10:00+00:00 [scheduled]>
+[2020-07-10 21:10:10,618] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-10 21:10:10,619] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-10 21:10:10,638] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10 20:10:00+00:00 [scheduled]>
+[2020-07-10 21:10:10,650] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10 20:10:00+00:00 [queued]>
+[2020-07-10 21:10:10,651] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 10, 20, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-10 21:10:10,651] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-10T20:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-10 21:10:10,651] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-10T20:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-10 21:10:11,603] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4389
+[2020-07-10 21:10:11,821] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 21:10:12,208] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-10 21:10:12,254] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10T20:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 21:10:22,551] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-10 20:10:00+00:00 exited with status success for try_number 1
+[2020-07-10 22:00:05,043] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_appeals.update_appeals 2020-07-09 22:00:00+00:00 [scheduled]>
+[2020-07-10 22:00:05,061] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-10 22:00:05,062] {{scheduler_job.py:961}} INFO - DAG aca_appeals has 0/16 running and queued tasks
+[2020-07-10 22:00:05,074] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_appeals.update_appeals 2020-07-09 22:00:00+00:00 [scheduled]>
+[2020-07-10 22:00:05,086] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_appeals.update_appeals 2020-07-09 22:00:00+00:00 [queued]>
+[2020-07-10 22:00:05,086] {{scheduler_job.py:1116}} INFO - Sending ('aca_appeals', 'update_appeals', datetime.datetime(2020, 7, 9, 22, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-10 22:00:05,086] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_appeals', 'update_appeals', '2020-07-09T22:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/appeals.py']
+[2020-07-10 22:00:05,087] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_appeals', 'update_appeals', '2020-07-09T22:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/appeals.py']
+[2020-07-10 22:00:05,698] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28519
+[2020-07-10 22:00:05,878] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-10 22:00:06,294] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/appeals.py
+[2020-07-10 22:00:06,343] {{cli.py:516}} INFO - Running <TaskInstance: aca_appeals.update_appeals 2020-07-09T22:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-10 22:00:16,663] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_appeals.update_appeals execution_date=2020-07-09 22:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 11:10:13,868] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10 23:10:00+00:00 [scheduled]>
+[2020-07-11 11:10:13,876] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-11 11:10:13,877] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 11:10:13,890] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10 23:10:00+00:00 [scheduled]>
+[2020-07-11 11:10:13,899] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10 23:10:00+00:00 [queued]>
+[2020-07-11 11:10:13,900] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 10, 23, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 11:10:13,900] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-10T23:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 11:10:13,900] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-10T23:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 11:10:14,739] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=19343
+[2020-07-11 11:10:14,905] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 11:10:15,234] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 11:10:15,280] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-10T23:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 11:10:20,586] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-10 23:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 13:00:05,150] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.daily_file_sensor_two 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:00:05,159] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-11 13:00:05,159] {{scheduler_job.py:961}} INFO - DAG aca_main has 0/16 running and queued tasks
+[2020-07-11 13:00:05,172] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.daily_file_sensor_two 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:00:05,183] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.daily_file_sensor_two 2020-07-10 13:00:00+00:00 [queued]>
+[2020-07-11 13:00:05,183] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'daily_file_sensor_two', datetime.datetime(2020, 7, 10, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 12 and queue default
+[2020-07-11 13:00:05,183] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'daily_file_sensor_two', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:00:05,183] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'daily_file_sensor_two', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:00:05,803] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=7501
+[2020-07-11 13:00:05,956] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 13:00:06,289] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-11 13:00:06,338] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.daily_file_sensor_two 2020-07-10T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 13:06:12,514] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.daily_file_sensor_two execution_date=2020-07-10 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 13:06:19,569] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.col_ops 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:06:19,577] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-11 13:06:19,578] {{scheduler_job.py:961}} INFO - DAG aca_main has 0/16 running and queued tasks
+[2020-07-11 13:06:19,590] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.col_ops 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:06:19,600] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.col_ops 2020-07-10 13:00:00+00:00 [queued]>
+[2020-07-11 13:06:19,601] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'col_ops', datetime.datetime(2020, 7, 10, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 11 and queue default
+[2020-07-11 13:06:19,601] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'col_ops', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:06:19,601] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'col_ops', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:06:20,272] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=9872
+[2020-07-11 13:06:20,426] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 13:06:20,775] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-11 13:06:20,847] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.col_ops 2020-07-10T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 13:07:16,296] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.col_ops execution_date=2020-07-10 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 13:07:23,363] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.col_surv 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:07:23,372] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 13:07:23,372] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-11 13:07:23,386] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.col_surv 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:07:23,397] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.col_surv 2020-07-10 13:00:00+00:00 [queued]>
+[2020-07-11 13:07:23,397] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'col_surv', datetime.datetime(2020, 7, 10, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 8 and queue default
+[2020-07-11 13:07:23,397] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'col_surv', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:07:23,398] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'col_surv', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:07:24,229] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=10379
+[2020-07-11 13:07:24,401] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 13:07:24,782] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-11 13:07:24,826] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.col_surv 2020-07-10T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 13:09:45,475] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.col_surv execution_date=2020-07-10 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 13:09:52,524] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.assign_check_id 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:09:52,531] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 13:09:52,532] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-11 13:09:52,552] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.assign_check_id 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:09:52,562] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.assign_check_id 2020-07-10 13:00:00+00:00 [queued]>
+[2020-07-11 13:09:52,562] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'assign_check_id', datetime.datetime(2020, 7, 10, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 7 and queue default
+[2020-07-11 13:09:52,562] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'assign_check_id', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:09:52,563] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'assign_check_id', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:09:53,225] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=11183
+[2020-07-11 13:09:53,393] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 13:09:53,744] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-11 13:09:53,791] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.assign_check_id 2020-07-10T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 13:23:03,470] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.assign_check_id execution_date=2020-07-10 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 13:23:10,532] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.fix_dups 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:23:10,544] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 13:23:10,544] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-11 13:23:10,560] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.fix_dups 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:23:10,572] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.fix_dups 2020-07-10 13:00:00+00:00 [queued]>
+[2020-07-11 13:23:10,572] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'fix_dups', datetime.datetime(2020, 7, 10, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 6 and queue default
+[2020-07-11 13:23:10,572] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'fix_dups', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:23:10,573] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'fix_dups', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:23:11,310] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=14562
+[2020-07-11 13:23:11,482] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 13:23:11,862] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-11 13:23:11,917] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.fix_dups 2020-07-10T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 13:25:37,476] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.fix_dups execution_date=2020-07-10 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 13:25:44,597] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_main.qa 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:25:44,607] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 13:25:44,608] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-11 13:25:44,622] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.qa 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 13:25:44,636] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_main.qa 2020-07-10 13:00:00+00:00 [queued]>
+[2020-07-11 13:25:44,636] {{scheduler_job.py:1116}} INFO - Sending ('aca_main', 'qa', datetime.datetime(2020, 7, 10, 13, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 5 and queue default
+[2020-07-11 13:25:44,636] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_main', 'qa', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:25:44,637] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_main', 'qa', '2020-07-10T13:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_daily_processing.py']
+[2020-07-11 13:25:45,378] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=15301
+[2020-07-11 13:25:45,529] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 13:25:45,909] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_daily_processing.py
+[2020-07-11 13:25:45,954] {{cli.py:516}} INFO - Running <TaskInstance: aca_main.qa 2020-07-10T13:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 13:26:01,708] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_main.qa execution_date=2020-07-10 13:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 15:27:49,937] {{scheduler_job.py:902}} INFO - 2 tasks up for execution:
+	<TaskInstance: aca_main.chatbot 2020-07-10 13:00:00+00:00 [scheduled]>
+	<TaskInstance: aca_main.send_check_id 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 15:27:50,092] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 2 task instances ready to be queued
+[2020-07-11 15:27:50,093] {{scheduler_job.py:961}} INFO - DAG aca_main has 1/16 running and queued tasks
+[2020-07-11 15:27:50,093] {{scheduler_job.py:961}} INFO - DAG aca_main has 2/16 running and queued tasks
+[2020-07-11 15:27:50,258] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_main.chatbot 2020-07-10 13:00:00+00:00 [scheduled]>
+	<TaskInstance: aca_main.send_check_id 2020-07-10 13:00:00+00:00 [scheduled]>
+[2020-07-11 15:27:50,306] {{scheduler_job.py:1058}} INFO - No tasks were able to have their state changed to queued.
+[2020-07-11 16:00:01,786] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_folder_checker.file_sensor 2020-07-10 20:00:00+00:00 [scheduled]>
+[2020-07-11 16:00:01,795] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-07-11 16:00:01,796] {{scheduler_job.py:961}} INFO - DAG aca_folder_checker has 0/16 running and queued tasks
+[2020-07-11 16:00:01,808] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor 2020-07-10 20:00:00+00:00 [scheduled]>
+[2020-07-11 16:00:01,818] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor 2020-07-10 20:00:00+00:00 [queued]>
+[2020-07-11 16:00:01,819] {{scheduler_job.py:1116}} INFO - Sending ('aca_folder_checker', 'file_sensor', datetime.datetime(2020, 7, 10, 20, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 3 and queue default
+[2020-07-11 16:00:01,819] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_folder_checker', 'file_sensor', '2020-07-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 16:00:01,819] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_folder_checker', 'file_sensor', '2020-07-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 16:00:02,557] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=10775
+[2020-07-11 16:00:02,717] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 16:00:03,035] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_folder_checker.py
+[2020-07-11 16:00:03,095] {{cli.py:516}} INFO - Running <TaskInstance: aca_folder_checker.file_sensor 2020-07-10T20:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 16:00:08,371] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_folder_checker.file_sensor execution_date=2020-07-10 20:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 16:00:15,423] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_folder_checker.file_sensor2 2020-07-10 20:00:00+00:00 [scheduled]>
+[2020-07-11 16:00:15,431] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-07-11 16:00:15,432] {{scheduler_job.py:961}} INFO - DAG aca_folder_checker has 0/16 running and queued tasks
+[2020-07-11 16:00:15,445] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor2 2020-07-10 20:00:00+00:00 [scheduled]>
+[2020-07-11 16:00:15,455] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor2 2020-07-10 20:00:00+00:00 [queued]>
+[2020-07-11 16:00:15,455] {{scheduler_job.py:1116}} INFO - Sending ('aca_folder_checker', 'file_sensor2', datetime.datetime(2020, 7, 10, 20, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 16:00:15,456] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_folder_checker', 'file_sensor2', '2020-07-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 16:00:15,456] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_folder_checker', 'file_sensor2', '2020-07-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 16:00:16,197] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=10840
+[2020-07-11 16:00:16,373] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 16:00:16,727] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_folder_checker.py
+[2020-07-11 16:00:16,777] {{cli.py:516}} INFO - Running <TaskInstance: aca_folder_checker.file_sensor2 2020-07-10T20:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 16:00:22,070] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_folder_checker.file_sensor2 execution_date=2020-07-10 20:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 16:00:31,127] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_folder_checker.file_sensor3 2020-07-10 20:00:00+00:00 [scheduled]>
+[2020-07-11 16:00:31,136] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-07-11 16:00:31,137] {{scheduler_job.py:961}} INFO - DAG aca_folder_checker has 0/16 running and queued tasks
+[2020-07-11 16:00:31,163] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor3 2020-07-10 20:00:00+00:00 [scheduled]>
+[2020-07-11 16:00:31,177] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor3 2020-07-10 20:00:00+00:00 [queued]>
+[2020-07-11 16:00:31,178] {{scheduler_job.py:1116}} INFO - Sending ('aca_folder_checker', 'file_sensor3', datetime.datetime(2020, 7, 10, 20, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 16:00:31,178] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_folder_checker', 'file_sensor3', '2020-07-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 16:00:31,178] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_folder_checker', 'file_sensor3', '2020-07-10T20:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 16:00:31,805] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=10913
+[2020-07-11 16:00:32,000] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 16:00:32,330] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_folder_checker.py
+[2020-07-11 16:00:32,385] {{cli.py:516}} INFO - Running <TaskInstance: aca_folder_checker.file_sensor3 2020-07-10T20:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 16:00:37,698] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_folder_checker.file_sensor3 execution_date=2020-07-10 20:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 16:10:05,428] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 15:10:00+00:00 [scheduled]>
+[2020-07-11 16:10:05,437] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 125 open slots and 1 task instances ready to be queued
+[2020-07-11 16:10:05,437] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 16:10:05,450] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 15:10:00+00:00 [scheduled]>
+[2020-07-11 16:10:05,463] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 15:10:00+00:00 [queued]>
+[2020-07-11 16:10:05,464] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 11, 15, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 16:10:05,464] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T15:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 16:10:05,464] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T15:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 16:10:06,083] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=13276
+[2020-07-11 16:10:06,250] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 16:10:06,588] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 16:10:06,635] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11T15:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 16:10:12,084] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-11 15:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 17:00:04,641] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-10 17:00:00+00:00 [scheduled]>
+[2020-07-11 17:00:04,654] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 17:00:04,655] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-11 17:00:04,667] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-10 17:00:00+00:00 [scheduled]>
+[2020-07-11 17:00:04,677] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-10 17:00:00+00:00 [queued]>
+[2020-07-11 17:00:04,677] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'daily_file_sensor_two', datetime.datetime(2020, 7, 10, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 10 and queue default
+[2020-07-11 17:00:04,677] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'daily_file_sensor_two', '2020-07-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-11 17:00:04,677] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'daily_file_sensor_two', '2020-07-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-11 17:00:05,511] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28373
+[2020-07-11 17:00:05,701] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 17:00:06,027] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-11 17:00:06,093] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.daily_file_sensor_two 2020-07-10T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 17:00:11,425] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.daily_file_sensor_two execution_date=2020-07-10 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 17:18:41,800] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.assign_check_id 2020-07-10 17:00:00+00:00 [scheduled]>
+[2020-07-11 17:18:41,810] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 17:18:41,810] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-11 17:18:41,824] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.assign_check_id 2020-07-10 17:00:00+00:00 [scheduled]>
+[2020-07-11 17:18:41,838] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.assign_check_id 2020-07-10 17:00:00+00:00 [queued]>
+[2020-07-11 17:18:41,838] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'assign_check_id', datetime.datetime(2020, 7, 10, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 5 and queue default
+[2020-07-11 17:18:41,839] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'assign_check_id', '2020-07-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-11 17:18:41,839] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'assign_check_id', '2020-07-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-11 17:18:42,491] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=880
+[2020-07-11 17:18:42,643] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 17:18:42,989] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-11 17:18:43,049] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.assign_check_id 2020-07-10T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 17:42:31,649] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.assign_check_id execution_date=2020-07-10 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 17:42:32,728] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: new_aca_main.fix_dups 2020-07-10 17:00:00+00:00 [scheduled]>
+[2020-07-11 17:42:32,755] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 17:42:32,755] {{scheduler_job.py:961}} INFO - DAG new_aca_main has 0/16 running and queued tasks
+[2020-07-11 17:42:32,780] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: new_aca_main.fix_dups 2020-07-10 17:00:00+00:00 [scheduled]>
+[2020-07-11 17:42:32,796] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: new_aca_main.fix_dups 2020-07-10 17:00:00+00:00 [queued]>
+[2020-07-11 17:42:32,797] {{scheduler_job.py:1116}} INFO - Sending ('new_aca_main', 'fix_dups', datetime.datetime(2020, 7, 10, 17, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 4 and queue default
+[2020-07-11 17:42:32,797] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'new_aca_main', 'fix_dups', '2020-07-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-11 17:42:32,798] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'new_aca_main', 'fix_dups', '2020-07-10T17:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/new_aca_daily_processing.py']
+[2020-07-11 17:42:33,545] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=6819
+[2020-07-11 17:42:33,721] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 17:42:34,069] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/new_aca_daily_processing.py
+[2020-07-11 17:42:34,140] {{cli.py:516}} INFO - Running <TaskInstance: new_aca_main.fix_dups 2020-07-10T17:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 17:45:29,821] {{scheduler_job.py:1256}} INFO - Executor reports execution of new_aca_main.fix_dups execution_date=2020-07-10 17:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 18:10:02,628] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_google_analytics.ga_user_tracking 2020-07-10 18:10:00+00:00 [scheduled]>
+[2020-07-11 18:10:02,639] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 126 open slots and 1 task instances ready to be queued
+[2020-07-11 18:10:02,639] {{scheduler_job.py:961}} INFO - DAG aca_google_analytics has 0/16 running and queued tasks
+[2020-07-11 18:10:02,654] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_google_analytics.ga_user_tracking 2020-07-10 18:10:00+00:00 [scheduled]>
+[2020-07-11 18:10:02,665] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_google_analytics.ga_user_tracking 2020-07-10 18:10:00+00:00 [queued]>
+[2020-07-11 18:10:02,665] {{scheduler_job.py:1116}} INFO - Sending ('aca_google_analytics', 'ga_user_tracking', datetime.datetime(2020, 7, 10, 18, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 18:10:02,665] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_google_analytics', 'ga_user_tracking', '2020-07-10T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/google_analytics.py']
+[2020-07-11 18:10:02,666] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_google_analytics', 'ga_user_tracking', '2020-07-10T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/google_analytics.py']
+[2020-07-11 18:10:03,435] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=16605
+[2020-07-11 18:10:03,627] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 18:10:03,992] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/google_analytics.py
+[2020-07-11 18:10:04,047] {{cli.py:516}} INFO - Running <TaskInstance: aca_google_analytics.ga_user_tracking 2020-07-10T18:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 18:10:14,426] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_google_analytics.ga_user_tracking execution_date=2020-07-10 18:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 19:10:03,641] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 18:10:00+00:00 [scheduled]>
+[2020-07-11 19:10:03,650] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 19:10:03,650] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 19:10:03,662] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 18:10:00+00:00 [scheduled]>
+[2020-07-11 19:10:03,672] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 18:10:00+00:00 [queued]>
+[2020-07-11 19:10:03,673] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 11, 18, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 19:10:03,673] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 19:10:03,673] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 19:10:04,332] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=6034
+[2020-07-11 19:10:04,519] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 19:10:04,894] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 19:10:04,940] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11T18:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 19:10:10,276] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-11 18:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 19:10:17,401] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 18:10:00+00:00 [scheduled]>
+[2020-07-11 19:10:17,410] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 19:10:17,410] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 19:10:17,423] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 18:10:00+00:00 [scheduled]>
+[2020-07-11 19:10:17,451] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 18:10:00+00:00 [queued]>
+[2020-07-11 19:10:17,451] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 11, 18, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 19:10:17,451] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 19:10:17,452] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T18:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 19:10:18,132] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=6155
+[2020-07-11 19:10:18,291] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 19:10:18,636] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 19:10:18,697] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11T18:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 19:10:28,990] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-11 18:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 20:00:19,501] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_folder_checker.file_sensor3 2020-07-11 16:00:00+00:00 [scheduled]>
+[2020-07-11 20:00:19,509] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 20:00:19,509] {{scheduler_job.py:961}} INFO - DAG aca_folder_checker has 0/16 running and queued tasks
+[2020-07-11 20:00:19,521] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor3 2020-07-11 16:00:00+00:00 [scheduled]>
+[2020-07-11 20:00:19,537] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_folder_checker.file_sensor3 2020-07-11 16:00:00+00:00 [queued]>
+[2020-07-11 20:00:19,537] {{scheduler_job.py:1116}} INFO - Sending ('aca_folder_checker', 'file_sensor3', datetime.datetime(2020, 7, 11, 16, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 20:00:19,537] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_folder_checker', 'file_sensor3', '2020-07-11T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 20:00:19,537] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_folder_checker', 'file_sensor3', '2020-07-11T16:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_folder_checker.py']
+[2020-07-11 20:00:20,204] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=24429
+[2020-07-11 20:00:20,411] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 20:00:20,775] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_folder_checker.py
+[2020-07-11 20:00:20,820] {{cli.py:516}} INFO - Running <TaskInstance: aca_folder_checker.file_sensor3 2020-07-11T16:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 20:00:26,106] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_folder_checker.file_sensor3 execution_date=2020-07-11 16:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 20:10:09,847] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 19:10:00+00:00 [scheduled]>
+[2020-07-11 20:10:09,856] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 20:10:09,856] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 20:10:09,873] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 19:10:00+00:00 [scheduled]>
+[2020-07-11 20:10:09,885] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 19:10:00+00:00 [queued]>
+[2020-07-11 20:10:09,885] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 11, 19, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 20:10:09,885] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 20:10:09,886] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 20:10:10,529] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28024
+[2020-07-11 20:10:10,687] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 20:10:11,047] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 20:10:11,105] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11T19:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 20:10:16,396] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-11 19:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 20:10:23,447] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 19:10:00+00:00 [scheduled]>
+[2020-07-11 20:10:23,455] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 20:10:23,455] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 20:10:23,467] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 19:10:00+00:00 [scheduled]>
+[2020-07-11 20:10:23,477] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 19:10:00+00:00 [queued]>
+[2020-07-11 20:10:23,477] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 11, 19, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 20:10:23,478] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 20:10:23,478] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T19:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 20:10:24,097] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28115
+[2020-07-11 20:10:24,265] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 20:10:24,592] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 20:10:24,639] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11T19:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 20:10:34,983] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-11 19:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 22:00:03,584] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_rebuild_index.permission 2020-07-10 22:00:00+00:00 [scheduled]>
+[2020-07-11 22:00:03,595] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 22:00:03,595] {{scheduler_job.py:961}} INFO - DAG aca_rebuild_index has 0/16 running and queued tasks
+[2020-07-11 22:00:03,611] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_rebuild_index.permission 2020-07-10 22:00:00+00:00 [scheduled]>
+[2020-07-11 22:00:03,624] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_rebuild_index.permission 2020-07-10 22:00:00+00:00 [queued]>
+[2020-07-11 22:00:03,624] {{scheduler_job.py:1116}} INFO - Sending ('aca_rebuild_index', 'permission', datetime.datetime(2020, 7, 10, 22, 0, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 22:00:03,624] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_rebuild_index', 'permission', '2020-07-10T22:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_rebuild_index.py']
+[2020-07-11 22:00:03,625] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_rebuild_index', 'permission', '2020-07-10T22:00:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/aca_rebuild_index.py']
+[2020-07-11 22:00:04,470] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=4862
+[2020-07-11 22:00:04,669] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 22:00:05,050] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/aca_rebuild_index.py
+[2020-07-11 22:00:05,122] {{cli.py:516}} INFO - Running <TaskInstance: aca_rebuild_index.permission 2020-07-10T22:00:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 22:00:10,491] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_rebuild_index.permission execution_date=2020-07-10 22:00:00+00:00 exited with status success for try_number 1
+[2020-07-11 22:10:06,168] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 21:10:00+00:00 [scheduled]>
+[2020-07-11 22:10:06,180] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 22:10:06,181] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 22:10:06,200] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 21:10:00+00:00 [scheduled]>
+[2020-07-11 22:10:06,212] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 21:10:00+00:00 [queued]>
+[2020-07-11 22:10:06,212] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 11, 21, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 22:10:06,213] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T21:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 22:10:06,213] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T21:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 22:10:06,792] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=8690
+[2020-07-11 22:10:06,969] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 22:10:07,363] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 22:10:07,428] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11T21:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 22:10:12,753] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-11 21:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 22:10:19,809] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 21:10:00+00:00 [scheduled]>
+[2020-07-11 22:10:19,816] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 127 open slots and 1 task instances ready to be queued
+[2020-07-11 22:10:19,817] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 22:10:19,829] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 21:10:00+00:00 [scheduled]>
+[2020-07-11 22:10:19,838] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 21:10:00+00:00 [queued]>
+[2020-07-11 22:10:19,839] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 11, 21, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 22:10:19,839] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T21:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 22:10:19,839] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T21:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 22:10:20,501] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=8783
+[2020-07-11 22:10:20,653] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 22:10:20,986] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 22:10:21,049] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11T21:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 22:10:31,405] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-11 21:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 23:10:10,551] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 22:10:00+00:00 [scheduled]>
+[2020-07-11 23:10:10,560] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-11 23:10:10,560] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 23:10:10,572] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 22:10:00+00:00 [scheduled]>
+[2020-07-11 23:10:10,581] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11 22:10:00+00:00 [queued]>
+[2020-07-11 23:10:10,581] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'hourly_file_sensor', datetime.datetime(2020, 7, 11, 22, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 2 and queue default
+[2020-07-11 23:10:10,582] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 23:10:10,582] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'hourly_file_sensor', '2020-07-11T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 23:10:11,444] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=5000
+[2020-07-11 23:10:11,640] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 23:10:11,990] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 23:10:12,058] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.hourly_file_sensor 2020-07-11T22:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 23:10:17,464] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.hourly_file_sensor execution_date=2020-07-11 22:10:00+00:00 exited with status success for try_number 1
+[2020-07-11 23:10:24,518] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 22:10:00+00:00 [scheduled]>
+[2020-07-11 23:10:24,525] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-11 23:10:24,525] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-11 23:10:24,536] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 22:10:00+00:00 [scheduled]>
+[2020-07-11 23:10:24,546] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 22:10:00+00:00 [queued]>
+[2020-07-11 23:10:24,546] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 11, 22, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-11 23:10:24,546] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 23:10:24,546] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T22:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-11 23:10:25,091] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=5127
+[2020-07-11 23:10:25,275] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-11 23:10:25,595] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-11 23:10:25,641] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11T22:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-11 23:10:35,944] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-11 22:10:00+00:00 exited with status success for try_number 1
+[2020-07-12 11:10:24,035] {{scheduler_job.py:902}} INFO - 1 tasks up for execution:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 23:10:00+00:00 [scheduled]>
+[2020-07-12 11:10:24,051] {{scheduler_job.py:934}} INFO - Figuring out tasks to run in Pool(name=default_pool) with 128 open slots and 1 task instances ready to be queued
+[2020-07-12 11:10:24,051] {{scheduler_job.py:961}} INFO - DAG aca_operations_Hourly has 0/16 running and queued tasks
+[2020-07-12 11:10:24,070] {{scheduler_job.py:1005}} INFO - Setting the follow tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 23:10:00+00:00 [scheduled]>
+[2020-07-12 11:10:24,084] {{scheduler_job.py:1080}} INFO - Setting the following 1 tasks to queued state:
+	<TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11 23:10:00+00:00 [queued]>
+[2020-07-12 11:10:24,084] {{scheduler_job.py:1116}} INFO - Sending ('aca_operations_Hourly', 'run_hourly', datetime.datetime(2020, 7, 11, 23, 10, tzinfo=<Timezone [UTC]>), 1) to executor with priority 1 and queue default
+[2020-07-12 11:10:24,085] {{base_executor.py:59}} INFO - Adding to queue: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T23:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-12 11:10:24,085] {{sequential_executor.py:45}} INFO - Executing command: ['airflow', 'run', 'aca_operations_Hourly', 'run_hourly', '2020-07-11T23:10:00+00:00', '--local', '--pool', 'default_pool', '-sd', '/usr/local/airflow/dags/aca/operations_hourly.py']
+[2020-07-12 11:10:24,779] {{settings.py:213}} INFO - settings.configure_orm(): Using pool settings. pool_size=5, max_overflow=10, pool_recycle=1800, pid=28330
+[2020-07-12 11:10:24,932] {{__init__.py:51}} INFO - Using executor SequentialExecutor
+[2020-07-12 11:10:25,288] {{dagbag.py:90}} INFO - Filling up the DagBag from /usr/local/airflow/dags/aca/operations_hourly.py
+[2020-07-12 11:10:25,342] {{cli.py:516}} INFO - Running <TaskInstance: aca_operations_Hourly.run_hourly 2020-07-11T23:10:00+00:00 [queued]> on host 42394187c64d
+[2020-07-12 11:10:30,656] {{scheduler_job.py:1256}} INFO - Executor reports execution of aca_operations_Hourly.run_hourly execution_date=2020-07-11 23:10:00+00:00 exited with status success for try_number 1
+Process DagFileProcessor578692-Process:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1029, in emit
+    self.flush()
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1009, in flush
+    self.stream.flush()
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1029, in emit
+    self.flush()
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1009, in flush
+    self.stream.flush()
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1029, in emit
+    self.flush()
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 1009, in flush
+    self.stream.flush()
+OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/logging/__init__.py", line 10

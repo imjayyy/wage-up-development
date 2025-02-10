@@ -1,0 +1,12 @@
+{% autoescape off %}
+New Feedback from {% if user != None %}{{user.username}}{% else %}} Unknown {% endif %}.
+
+Submitter is {{ first_name }} {{ last_name }}, with tech id {{tech_id}}
+
+Reply to {{ email }}
+
+{{ explanation }}
+
+-WageUp Team
+
+{% endautoescape %}

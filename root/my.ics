@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:ics.py - http://git.io/lLljaA
+BEGIN:VEVENT
+DESCRIPTION:This is an event you said you would attend.
+LOCATION:aca-conferencing.wageup.com
+ORGANIZER;CN=dgonier@gmail.com:mailto:dgonier@gmail.com
+DTSTART:20200823T210000Z
+STATUS:CONFIRMED
+SUMMARY:asdfasdf
+UID:5ca7e398-fe29-4a6e-acca-c6131789ba51@5ca7.org
+END:VEVENT
+METHOD:REQUEST
+END:VCALENDAR

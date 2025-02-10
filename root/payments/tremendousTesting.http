@@ -1,0 +1,2 @@
+GET https://www.tremendous.com/api/v2/rewards?offset=0
+Authorization: Bearer PROD_mU8GdZVwA--5semm74J1ls1vZF40w3ojsYpHRa6wXXe

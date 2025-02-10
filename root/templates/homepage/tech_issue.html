@@ -1,0 +1,19 @@
+{% autoescape off %}
+Technology Issue
+
+Shop ID: {{ shop_id }}
+Territory Manager: {{ tm }}
+
+Point of Contact:
+Name: {{ poc.name }}
+Role: {{ poc.role }}
+Phone Number: {{ poc.phone }}
+Email: {{ poc.email }}
+
+
+Category: {{ category }}
+Description:
+{{ description }}
+
+Submitted by: {{ submitter_name }} - {{ submitter_email}}
+{% endautoescape %}

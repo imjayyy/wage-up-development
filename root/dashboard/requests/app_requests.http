@@ -1,0 +1,67 @@
+POST {{url}}/accounts/login/
+Content-Type: application/json
+
+{
+	"username": "{{username}}",
+	"password": "{{password}}"
+}
+
+> {%
+client.global.set("auth_token", response.body.access);
+client.global.set("employee_slug", response.body.slug);
+%}
+
+### Authorization by token, part 2. Use token to authorize.
+POST {{url}}/dashboard/dashboard-data/numberHighlights/net-reroute-metrics/
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "dataTarget": "std12e_reduced",
+  "chart_type": "table",
+  "time_type": [],
+  "geography": {
+    "id": 1327,
+    "slug": "facility-rep-abutwe",
+    "type": "Facility-Rep",
+    "name": "ABUTWE"
+  },
+  "filters": {},
+  "metrics": [
+    "org_svc_facl_id__name",
+    "org_business_id__name",
+    "sc_dt_surveys",
+    "sc_id_surveys",
+    "emp_driver_id__full_name",
+    "reroute",
+    "remove",
+    "resolution_desc",
+    "tlc_desc",
+    "outc1",
+    "driver10",
+    "q24",
+    "q26",
+    "q30",
+    "driver5",
+    "pta",
+    "ata",
+    "tcd",
+    "emp_driver_id",
+    "emp_driver_id__raw_data_driver_id",
+    "date_updated_surveys"
+  ],
+  "relation": [
+    "self"
+  ],
+  "args": {
+    "routine": "raw_surveys",
+    "page": 1,
+    "menu": [
+      {
+        "text": "Survey Focus",
+        "dispatchAction": "dashboard/setSurveyFocus"
+      }
+    ],
+    "rows_per_page": 50
+  }
+}

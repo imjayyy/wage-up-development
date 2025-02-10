@@ -1,0 +1,84 @@
+POST {{url}}/accounts/login/
+Content-Type: application/json
+
+{
+	"username": "{{username}}",
+	"password": "{{password}}"
+}
+
+> {%
+client.global.set("auth_token", response.body.access);
+client.global.set("permissions", response.body.permission)
+client.log(client.global)
+%}
+##
+### Authorization by token, part 2. Use token to authorize.
+POST {{url}}/payments/send-payment-email/
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{}
+
+#### Authorization by token, part 2. Use token to authorize.
+#POST {{url}}/payments/
+#Authorization: Bearer {{auth_token}}
+#Content-Type: application/json
+#
+#{
+#  "purpose": "create_transaction",
+#  "parameters": {
+#    "payment_to": 81982,
+#    "payment_amount": 1,
+#    "reason": "Congratulations! You were selected as one of the 50 early registration award winners for the High-5 Campaign, and have been awarded $100",
+#    "notes": "test 2",
+#    "payment_method": "WINGSPAN_API",
+#    "recipient_email": "christine.mazur@wageup.com",
+#    "transaction_tag": 1
+#  }
+#}
+
+
+###
+#> {%
+#client.test("Request executed successfully", function() {
+#    client.assert(response.status === 200, "Response Status is not 200")
+#    client.log(response.body.length)
+#    client.assert(response.body.hours.length === 96, "Response length is wrong")
+#
+#}) %}
+
+
+###
+#{
+#  "slug": "grab-automotive-concepts-l-l-c",
+#  "type": "Station-Business",
+#  "purpose": "get_csv_schedule_template",
+#  "parameters": {
+#    "date": "2021-04-23",
+#    "action": "publish",
+#    "is_week": true
+#  }
+#}
+#
+###
+#POST https://6lg4jiumgd.execute-api.us-east-1.amazonaws.com/default/makeExcelTemplate/
+#Content-Type: application/json
+#x-api-key: LD6dG9mOVX6B5GQ11GaSi2yM9NgTiWv35N2wrYmi
+#
+#
+#
+#> {%
+#client.test("Request executed successfully", function() {
+#    client.assert(response.status === 200, "Response Status is not 200")
+#    client.log(response.body.length)
+#    client.assert(response.body.hours.length === 96, "Response length is wrong")
+#
+#}) %}
+
+
+
+###
+#POST https://aca-dashboard-api.wageup.com/payments/send-payment-email/
+#Content-Type: application/json
+#
+#{}

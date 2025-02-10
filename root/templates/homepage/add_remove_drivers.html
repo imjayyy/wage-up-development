@@ -1,0 +1,30 @@
+{% autoescape off %}
+Add/Remove Drivers
+
+Shop ID: {{ shop_id }}
+Territory Manager: {{ tm }}
+
+Does the requested Change(s) need to be made to other shop IDs the driver is attached to? {{ change_req | yesno }}
+{% if change_req %}Additional Shop IDs{% for i in shop_id_list %}
+{{ i }}
+{% endfor %}{% endif %}
+Add Driver(s)
+{% for ad in add_drivers %}
+Driver Name: {{ ad.name }}
+Birthdate: {{ ad.birthdate }}
+Driver Type: {{ ad.type }}
+Phone Number: {{ ad.phone }}
+{% if ad.do_not_contact %}Do not Contact{% endif %}
+
+{% endfor %}
+Remove Driver(s)
+{% for rd in remove_drivers %}
+Driver Name: {{ rd.name }}
+Driver ID: {{ rd.driver_id }}
+{% endfor %}
+
+Additional Comments:
+{{ comments }}
+
+Submitted by: {{ submitter_name }} - {{ submitter_email}}
+{% endautoescape %}

@@ -1,0 +1,18 @@
+venv
+*.pyc
+.idea
+*.tar.gz
+*.bat
+media
+/root/node_modules/
+/root/deployScripts/*
+/root/root/whoosh_index
+/root/rebuild_index.py
+/root/vars.json
+/root/deployments.txt
+/root/logs/
+.DS_Store
+/root/.DS_Store
+/stageing server/
+readme muj.txt
+root/gaKey.json

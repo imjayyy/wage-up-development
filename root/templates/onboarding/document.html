@@ -1,0 +1,10 @@
+{% autoescape off %}
+<h1>{{ title }}</h1>
+<div class="document-body {{ element_type }}">
+{{ html_content }}
+</div>
+<h2>Related Links</h2>
+{% for related_element in related_element %}
+<a href="{{ related_element.link }}">{{ related_element.title }}</a>
+{% endfor %}}
+{% endautoescape %}

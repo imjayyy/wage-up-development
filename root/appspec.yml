@@ -1,0 +1,20 @@
+version: 0.0
+os: linux
+files:
+  - source: channels.conf
+    destination: /etc/supervisor/conf.d
+  - source: /
+    destination: /home/ubuntu/appq
+hooks:
+  BeforeInstall:
+    - location: deployScripts/beforeInstall.sh
+      runas: root
+  AfterInstall:
+    - location: deployScripts/afterInstall.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: deployScripts/ApplicationStart.sh
+      timeout: 300
+      runas: root
+

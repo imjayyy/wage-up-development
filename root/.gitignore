@@ -1,0 +1,16 @@
+venv
+*.pyc
+.idea
+*.tar.gz
+*.bat
+media
+./root/deployScripts
+./root/whoosh_index
+./rebuild_index.py
+vars.json
+# Elastic Beanstalk Files
+#.elasticbeanstalk/*
+#!.elasticbeanstalk/*.cfg.yml
+#!.elasticbeanstalk/*.global.yml
+#/.elasticbeanstalk/
+/.elasticbeanstalk/config.yml

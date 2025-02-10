@@ -1,0 +1,14 @@
+{% autoescape off %}
+<p>
+Hi {{ current_user.first_name }} {{ current_user.last_name }},
+</p>
+<p>
+You requested an email reset for {{ username }}, and specified the following email: {{ email }}
+</p>
+<p>
+-WageUp Team
+</p>
+<p>
+If you did not make this change, please contact us at help@wageup.com.
+
+{% endautoescape %}

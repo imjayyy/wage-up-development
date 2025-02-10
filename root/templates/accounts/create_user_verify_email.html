@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+Hi {{ first_name }} {{ last_name }},
+
+Please verify that this is your email by clicking the link below:
+
+{{ domain }}/accounts/verify/{{ uid }}/{{ token }}
+
+Welcome Aboard!
+-WageUp Team
+
+If you have questions about this email or gaining access you can contact any of the following people:
+
+Devin at devin@wageup.com
+Morgan at morgan@wageup.com
+
+
+{% endautoescape %}

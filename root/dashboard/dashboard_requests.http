@@ -1,0 +1,31 @@
+POST http://127.0.0.1:8000/accounts/login/
+Content-Type: application/json
+
+{
+	"username": "nedriver",
+	"password": "aaascores"
+}
+
+> {%
+client.global.set("auth_token", response.body.access);
+client.global.set("employee_slug", response.body.slug);
+%}
+
+#### dashboards
+#
+#GET {{url}}/dashboard/my-dashboard/
+#Authorization: Bearer {{auth_token}}
+#Content-Type: application/json
+
+
+### surveys
+POST http://127.0.0.1:8000/performance/
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{"purpose":"sign_up_to_campaign","parameters":{"id":1,"payments_email":"shannon.callow+1@thedgcgroup.com"}}
+
+
+
+
+###{"dataTarget":"std12e_reduced","chart_type":"numberHighlights","time_type":[],"geography":{"id":1,"slug":"aaa-ne","type":"Club","name":"AAA NE CLUB"},"filters":{"reroute":false},"metrics":["overall_sat_avg","facility_sat_avg","response_sat_avg","kept_informed_sat_avg","overall_sat_count"],"relation":["self"],"args":{"routine":"survey_aggregator"}}

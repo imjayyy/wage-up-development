@@ -1,0 +1,29 @@
+POST {{url}}/accounts/login/
+Content-Type: application/json
+
+{
+	"username": "{{username}}",
+	"password": "{{password}}"
+}
+
+> {%
+client.global.set("auth_token", response.body.access);
+client.global.set("permissions", response.body.permission)
+client.log(client.global)
+%}
+
+### Authorization by token, part 2. Use token to authorize.
+POST {{url}}/accounts/employee/
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{"employee_lookup":  2}
+
+
+> {%
+
+client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response Status is not 200")
+
+}) %}
+###

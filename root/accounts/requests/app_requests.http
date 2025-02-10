@@ -1,0 +1,80 @@
+POST {{url}}/accounts/login/
+Content-Type: application/json
+
+{
+	"username": "{{username}}",
+	"password": "{{password}}",
+	"version": "12.0.2",
+	"sat_app": true
+}
+
+> {%
+client.global.set("auth_token", response.body.access);
+client.global.set("permissions", response.body.permission)
+client.log(client.global)
+%}
+
+### part two
+POST {{url}}/dashboard/dashboard-data/table/raw-surveys/
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+{
+  "dataTarget": "std12e_reduced",
+  "chart_type": "table",
+  "time_type": [],
+  "geography": {
+    "id": 1,
+    "slug": "aaa-ne",
+    "type": "Club",
+    "name": "AAA NE CLUB"
+  },
+  "filters": {},
+  "metrics": [
+    "org_svc_facl_id__name",
+    "org_business_id__name",
+    "sc_dt_surveys",
+    "sc_id_surveys",
+    "recordeddate",
+    "emp_driver_id__full_name",
+    "reroute",
+    "remove",
+    "resolution_desc",
+    "tlc_desc",
+    "outc1",
+    "driver10",
+    "q24",
+    "q26",
+    "q30",
+    "driver5",
+    "pta",
+    "ata",
+    "driver_called",
+    "spot_minutes",
+    "fst_shop",
+    "tcd",
+    "emp_driver_id"
+  ],
+  "relation": [
+    "self"
+  ],
+  "args": {
+    "routine": "raw_surveys",
+    "page": 1,
+    "menu": [
+      {
+        "text": "Send Note/FastApp Reward",
+        "dispatchAction": "dashboard/setSurveyFocus"
+      }
+    ],
+    "rows_per_page": 50
+  }
+}
+
+> {%
+
+client.test("Request executed successfully", function() {
+    client.assert(response.status === 200, "Response Status is not 200")
+
+}) %}
+###
