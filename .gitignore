@@ -13,6 +13,6 @@ media
 /root/logs/
 .DS_Store
 /root/.DS_Store
-/stageing server/
+stageing server/
 readme muj.txt
 root/gaKey.json
