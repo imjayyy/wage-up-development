@@ -117,7 +117,7 @@ class EmployeeDashboardApi(APIView):
         '''
 
         request_type = self.request_obj.get("type")
-
+        print(request_type)
         if request_type == "dashboard":
 
             if 'id' in dict.keys(self.request_obj):
@@ -179,6 +179,7 @@ class EmployeeDashboardApi(APIView):
 
     # TODO: THIS CURRENTLY ONLY GETS DASHBOARDS YOU ARE THE OWNER OF, NOT THOSE THAT HAVE BEEN SHARED WITH YOU
     def get(self, request):
+        print(" IN GET REQUEST = EmployeeDashboardApi" )
         return self.get_employee_dashboard_set(request)
 
     def update_dashboard_element_viewed(self):

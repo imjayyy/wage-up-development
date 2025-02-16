@@ -1,0 +1,1 @@
+ssh -i jbs-staging-wage-up-key.pem ubuntu@100.29.47.180

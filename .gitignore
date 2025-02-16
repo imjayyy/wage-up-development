@@ -16,3 +16,5 @@ media
 stageing server/
 readme muj.txt
 root/gaKey.json
+devinKeyPrivate.ppk
+devinKeyPrivate.pem

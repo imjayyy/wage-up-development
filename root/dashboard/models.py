@@ -564,6 +564,8 @@ class Std12EReduced(models.Model):
     sister_reroute = models.IntegerField(db_column='SISTER_REROUTE', blank=True, null=True)  # Field name made lowercase.
     appeals_request_id = models.IntegerField(db_column='APPEALS_REQUEST_ID', blank=True, null=True)  # Field name made lowercase.
     is_valid_record = models.BooleanField(db_column='IS_VALID_RECORD', blank=True, null=True)
+    is_valid_includes_canceled = models.BooleanField(db_column='IS_VALID_INCLUDES_CANCELED', blank=True, null=True)
+    
     class Meta:
         managed = False
         db_table = 'std12e_reduced'

@@ -1562,8 +1562,12 @@ class DashboardData(DashboardBase):
                     mean = statistics.mean([s for s in series if s is not None])
                     std = statistics.stdev([s for s in series if s is not None])
                 except statistics.StatisticsError:
-                    mean = [s for s in series if s is not None][0]
-                    std = mean / 10
+                    try:
+                        mean = [s for s in series if s is not None][0]
+                        std = mean / 10
+                    except:
+                        mean = 0
+                        std = 0
                 self.out.append({
                     'series': series,
                     'type': 'tinyLine',
@@ -1712,8 +1716,35 @@ class DashboardData(DashboardBase):
     def get_survey_data(self):
         """Main survey call"""
         print('get_survey_data')
-        self.baseQ = Std12EReduced.objects.filter(is_valid_record=True)
+        # self.baseQ = self.baseQ.filter(IS_VALID_INCLUDES_CANCELED=False)
+        # Cancelled Calls
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_record=False, IS_VALID_INCLUDES_CANCELED=1)
+        #Exclude Cancelled Calls)
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_record=True)
+        #All Calls (Include Both Cancelled and Non-Cancelled Calls)
+        # self.baseQ = Std12EReduced.objects.filter(IS_VALID_INCLUDES_CANCELED=1)
+        # print(self.baseQ.query)
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_includes_canceled=True)
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_includes_canceled=True)
+
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_record=True, is_valid_includes_canceled=1)
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_includes_canceled=True)
+
+        # self.baseQ = Std12EReduced.objects.filter(is_valid_record=False, is_valid_includes_canceled=1)
+
+
         print('filters', self.filters)
+        # 'Is_Valid_Include_Cancelled'
+        if self.request.data.get('additional_filters').get('is_valid_includes_canceled'):
+            if self.request.data.get('additional_filters').get('is_valid_includes_canceled') == 'all_calls':
+                self.baseQ = Std12EReduced.objects.filter(is_valid_includes_canceled=True)
+            if self.request.data.get('additional_filters').get('is_valid_includes_canceled') == 'cancelled_calls':
+                self.baseQ = Std12EReduced.objects.filter(is_valid_record=False, is_valid_includes_canceled=1)
+            if self.request.data.get('additional_filters').get('is_valid_includes_canceled') == 'non_cancelled_calls':
+                self.baseQ = Std12EReduced.objects.filter(is_valid_record=True)
+        else:
+            self.baseQ = Std12EReduced.objects.filter(is_valid_record=True)
+
         if self.data.get('args', {}).get('comp', False):
             self.filters.pop('sc_dt_surveys__lte', None)
             self.filters.pop('sc_dt_surveys__gte', None)
@@ -1730,7 +1761,6 @@ class DashboardData(DashboardBase):
         #     del self.filters['order_by']
 
         self.q = self.baseQ.filter(**self.filters)
-
 
 
         print(self.object_type)
